@@ -1,0 +1,328 @@
+/*
+Theme Name: Site Treinamento Comercial
+Text Domain: site-treinamento-comercial
+Version: 0.2.0
+Requires at least: 6.0
+Requires PHP: 7.4
+Description: Tema inicial com Bootstrap 5.3, cabeçalho fixo, carrosséis e práticas básicas de segurança.
+Author: Equipe
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+@import url('https://mondrian.claro.com.br/tokens/claro-tokens-latest.custom-properties.css');
+@import url('https://mondrian.claro.com.br/fonts/mondrian-fonts-latest.css');
+
+html	{ width: 100%; min-height: 100%; font-size: 62.5%; }
+
+body {
+  background: transparent url('bgs/bg_body.png');
+  background-size: cover;
+  /* max-width: 540px; */
+  margin: 0 auto;
+  font-family: 'AMX', sans-serif;
+  font-weight: 500; 
+  line-height: 1.2;
+  font-size: 1.9rem;
+  color: #000;
+}
+
+body.page-embaixador, body.page-indicadores {
+  background: transparent url('bgs/bg_branco.png');
+  background-size: cover;
+  background-repeat: repeat-y;
+}
+body.page-programadoras {
+  background: #000;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 16%, rgba(204, 34, 43, 1) 58%, rgba(50, 7, 85, 1) 88%);
+}
+
+
+
+body.page-embaixador .container {
+  background: transparent url('bgs/bg_embaixador.png');
+  background-size: cover;
+  background-repeat: repeat-y;
+}
+
+body.page-embaixador .entry-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+body.page-embaixador .wp-block-video video, body.page-embaixador .has-text-color {
+  margin-bottom: 3.5rem;
+}
+
+
+body.page-indicadores main {
+  background: transparent url('imgs/top_indicadores.png');
+  background-size: initial;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+
+body.page-quem-somos h1, body.page-programadoras h1 {
+  color: #fff;
+}
+
+.h1, h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 5rem 0 0;
+}
+
+h1.home {
+  text-transform: uppercase;
+  
+  border-image: url("/images/border.png")
+}
+
+h1.home span {
+  font-weight: 400;
+  font-style: italic;
+}
+
+h1 img {
+  float: right;
+  max-width: 125px;
+  margin-right: 12rem;
+}
+
+ .h2, h2 {
+    font-size: 4.1rem;
+    color: #fff;
+    font-weight: 700;
+  }
+
+.h3, h3 {
+  font-size: 4rem;
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5rem 0;
+  color: #CC222B;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 0 1rem;
+  color: #CC222B;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1.9rem;
+  max-width: 550px;
+  margin: 0 auto;
+  color: #262626;
+  text-align: center;
+  padding: 0 0 1rem;
+  font-weight: 500;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem 0;
+  font-size: 1.2rem;
+}
+
+footer img {
+  max-height: 25px;
+}
+
+#principalNavbar {
+  background-color: #000;
+  padding: 1.5rem;
+  box-shadow: 0px 3px 14px #33333390;
+}
+#principalNavbar a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  font-weight: 300 !important;
+}
+#principalNavbar a strong {
+  color: #FF0000 !important;
+  font-weight: 700 !important;
+}
+
+#principalNavbar button {
+  font-size: 1.5rem;
+}
+
+#principalNavbar .container {
+  display: block;
+  text-align: center;
+}
+
+#primaryOffcanvas {
+  max-width: 300px;
+}
+
+#primary-menu li {
+  display: contents;
+}
+
+#primary-menu li a {
+  color: #000;
+  border-bottom: 2px solid #ccc;
+  max-width: 60%;
+  font-weight: 700;
+  padding: 1.2rem 1.5rem;
+}
+
+#primary-menu li.current_page_item a, #primary-menu li a:hover {
+  color: #FF0000 !important;
+  font-weight: 800 !important;
+}
+
+.offcanvas-header button {
+  margin: 1rem !important;
+  font-size: 2.3rem;
+}
+
+.search-form input.search-field {
+  min-width: 220px;
+  margin-right: .5rem;
+  background-color: #1A1A1A;
+  border: none;
+  padding: 1rem;
+  color: #fff !important;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+}
+
+input:focus {
+  outline: none;
+}
+[type="search"]::placeholder {
+  color: #666;
+}
+
+#principalNavbar button.search-submit {
+  font-size: 1.5rem;
+  border: none;
+  padding: 0;
+  opacity: 0.3;
+  margin-top: -0.5rem;
+}
+
+#principalNavbar button.search-submit:hover {
+  background-color: transparent;
+  opacity: 0.7;
+}
+
+.hero-carousel .carousel-item {
+  /* define uma altura; ajuste como quiser ou use aspect-ratio */
+  min-height: 600px;
+
+  background-size: contain;      /* inteiro visível */
+  background-repeat: no-repeat;  /* sem repetir */
+  background-position: right center; /* alinhado à esquerda, central vertical */
+}
+
+hr{
+  border: 0;                 /* tira a borda padrão */
+  height: 48px;              /* altura da “faixa” */
+  background: url("imgs/hr.png") center/contain no-repeat;
+  /* center = centraliza, contain = encaixa inteiro */
+}
+
+.carousel-control-next, .carousel-control-prev {
+  width: 10%;
+}
+
+.carousel-item p, .carousel-item .small {
+  color: #fff !important;
+  font-weight: 400;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0.3rem 1rem;
+}
+
+.carousel-indicators .active {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 1rem;
+}
+
+.canais-card .card-title {
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 0;
+}
+
+.card-body {
+  padding: 2.5rem;
+  min-height: 160px;
+  color: #aaa;
+}
+
+.card-footer {
+  padding: 0 2.5rem 2.5rem;
+}
+
+.canais-card a, .canais-card {
+  color: #fff;
+}
+
+.canais-card {
+  background-color: #000;
+  border-radius: 1.5rem;
+}
+
+.canais-card .card-text {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+
+
+
+
+
+.caixa_indicadores {
+  background-color: #E5E5E5;
+  padding: 4rem;
+  max-width: 800px;
+  text-align: center;
+  margin: 5rem auto;
+  border-radius: 2rem;
+}
+
+.caixa_indicadores select {
+  display: inline-block;
+  width: auto;
+  padding: 1rem 2rem;
+  min-width: 127px;
+  font-size: 1.4rem;
+  border-radius: 4rem;
+}
+
+.indicadores {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+#indicadores-box span {
+  color: #CC222B;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+#indicadores-box .col-sm-4 {
+  text-align:center;
+}
